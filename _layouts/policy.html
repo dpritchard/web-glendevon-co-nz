@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+    {%- include head.html -%}
+
+    <style type="text/css">
+        h1 {
+            font-size: 1.4em;
+            line-height: 1.5;
+        }
+        h2, h3, h4, h5 {
+            font-size: 1em;
+            font-weight: normal;
+            line-height: 1.5;
+        }
+        p {
+            padding-left: 1em;
+            line-height: 1.5;
+        }
+        .header-section-number::after {
+            content: ":";
+        }
+        .toc-section-number::after {
+            content: ":";
+        }
+        table {
+            border:1px solid black;
+            border-collapse:collapse;
+        }
+    </style>
+
+
+<body>
+
+    {%- include header.html -%}
+
+    <div class="py-5">
+        <div class="container page-content">
+            <header>
+                <h1>{{ page.title | escape }}</h1>
+            </header>
+
+            <section>
+                {{ content }}
+            </section>
+        </div>
+    </div>
+
+</body>
+
+</html>
